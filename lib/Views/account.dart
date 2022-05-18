@@ -11,7 +11,11 @@ class _AccountPageState extends State<AccountPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Text('acccount'),
+        appBar: AppBar(
+        title: const Text('Account'),
+        backgroundColor: Color(0xFF53B978),
+      ),
+      body: const Text('account'),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:ficar/Views/account.dart';
 import 'package:ficar/Views/home.dart';
+import 'package:ficar/Views/login.dart';
 import 'package:ficar/Views/notifications.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        //primarySwatch: Color(0xff20552E),
+      
       ),
       home: const MyHomePage(),
     );
@@ -52,19 +54,18 @@ class _MyHomePageState extends State<MyHomePage> {
       body: screens[index],
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
-            indicatorColor: Color.fromARGB(255, 169, 245, 197),
-            labelTextStyle: MaterialStateProperty.all(
-              TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-              ),
+          indicatorColor: Color.fromARGB(255, 169, 245, 197),
+          labelTextStyle: MaterialStateProperty.all(
+            TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
             ),
-            
-            ),
+          ),
+        ),
         child: NavigationBar(
           height: 60,
           selectedIndex: index,
-          onDestinationSelected: (index)=>setState(() => this.index = index),
+          onDestinationSelected: (index) => setState(() => this.index = index),
           labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
           animationDuration: Duration(seconds: 3),
           destinations: [
