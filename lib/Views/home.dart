@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
-        backgroundColor: Color(0xFF53B978),
+        backgroundColor: kPrimaryColor,
          actions: [
           IconButton(
             onPressed: () {

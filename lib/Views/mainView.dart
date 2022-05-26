@@ -1,4 +1,5 @@
 
+import 'package:ficar/Constants/routes.dart';
 import 'package:ficar/Views/account.dart';
 import 'package:ficar/Views/home.dart';
 import 'package:ficar/Views/notifications.dart';
@@ -23,7 +24,7 @@ class _MainPageState extends State<MainPage> {
       body: screens[index],
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
-          indicatorColor: const Color.fromARGB(255, 169, 245, 197),
+          indicatorColor: kPrimaryColor,
           labelTextStyle: MaterialStateProperty.all(
             const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
           ),
@@ -33,22 +34,22 @@ class _MainPageState extends State<MainPage> {
             selectedIndex: index,
             onDestinationSelected: (index) =>
                 setState(() => this.index = index),
-            labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+             labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
             animationDuration: const Duration(seconds: 1),
-            destinations: [
-              NavigationDestination(
-                icon: Icon(Icons.home_outlined),
-                selectedIcon: Icon(Icons.home),
+            destinations: const  [
+               NavigationDestination(
+                icon:  Icon(Icons.home),
+                selectedIcon:  Icon(Icons.home, color: Colors.white,),
                 label: 'Home',
               ),
-              NavigationDestination(
-                icon: Icon(Icons.notifications_outlined),
-                selectedIcon: Icon(Icons.notifications),
+               NavigationDestination(
+                icon: Icon(Icons.notifications),
+                selectedIcon:Icon(Icons.notifications, color: Colors.white,),
                 label: 'notifications',
               ),
-              NavigationDestination(
-                icon: Icon(Icons.manage_accounts_outlined),
-                selectedIcon: Icon(Icons.manage_accounts),
+             NavigationDestination(
+                icon:  Icon(Icons.manage_accounts),
+                selectedIcon: Icon(Icons.manage_accounts, color: Colors.white,),
                 label: 'Account',
               ),
             ]),

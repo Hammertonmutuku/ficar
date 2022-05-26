@@ -1,3 +1,4 @@
+import 'package:ficar/Constants/routes.dart';
 import 'package:flutter/material.dart';
 
 class NotificationPage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _NotificationPageState extends State<NotificationPage> {
     return Scaffold(
         appBar: AppBar(
         title: const Text('Notification'),
-        backgroundColor: Color(0xFF53B978),
+        backgroundColor: kPrimaryColor,
       ),
       body: const Text('Notification'),
     );
