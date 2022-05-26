@@ -1,3 +1,4 @@
+import 'package:ficar/Constants/routes.dart';
 import 'package:flutter/material.dart';
 
 class AccountPage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _AccountPageState extends State<AccountPage> {
     return Scaffold(
         appBar: AppBar(
         title: const Text('Account'),
-        backgroundColor: Color(0xFF53B978),
+        backgroundColor: kPrimaryColor,
       ),
       body: const Text('account'),
     );

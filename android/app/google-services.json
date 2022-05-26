@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "267909970773",
+    "project_id": "ficar-295d8",
+    "storage_bucket": "ficar-295d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267909970773:android:46c5be429de3f996368ddc",
+        "android_client_info": {
+          "package_name": "com.example.ficar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267909970773-u670r9g6ja58ofas5ik5oepslne087r2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDssEb0nZ5hPd5sJTf07xtk_aXesJPiHLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267909970773-u670r9g6ja58ofas5ik5oepslne087r2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
