@@ -1,6 +1,6 @@
 
 import 'package:ficar/Constants/routes.dart';
-import 'package:ficar/Views/account.dart';
+import 'package:ficar/Views/Account/account_setting.dart';
 import 'package:ficar/Views/home.dart';
 import 'package:ficar/Views/notifications.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class _MainPageState extends State<MainPage> {
   int index = 0;
   final screens = [
     const HomePage(),
-    const NotificationPage(),
+    // const NotificationPage(),
     const AccountPage(),
   ];
 
@@ -42,11 +42,11 @@ class _MainPageState extends State<MainPage> {
                 selectedIcon:  Icon(Icons.home, color: Colors.white,),
                 label: 'Home',
               ),
-               NavigationDestination(
-                icon: Icon(Icons.notifications),
-                selectedIcon:Icon(Icons.notifications, color: Colors.white,),
-                label: 'notifications',
-              ),
+              //  NavigationDestination(
+              //   icon: Icon(Icons.notifications),
+              //   selectedIcon:Icon(Icons.notifications, color: Colors.white,),
+              //   label: 'notifications',
+              // ),
              NavigationDestination(
                 icon:  Icon(Icons.manage_accounts),
                 selectedIcon: Icon(Icons.manage_accounts, color: Colors.white,),
