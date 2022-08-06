@@ -25,22 +25,7 @@ class ProfilePicture extends StatelessWidget {
                   radius: kSpacingUnit.w * 6,
                   backgroundImage: const AssetImage('assets/images/avatar.png'),
                 ),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Container(
-                    height: kSpacingUnit.w * 2.5,
-                    width: kSpacingUnit.w * 2.5,
-                    decoration: const BoxDecoration(
-                      color: kPrimaryColor,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(
-                      LineAwesomeIcons.pen,
-                      color: Colors.white,
-                      size: ScreenUtil().setSp(kSpacingUnit.w * 1.5),
-                    ),
-                  ),
-                )
+               
               ],
             ),
           ),

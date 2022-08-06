@@ -7,8 +7,9 @@ const registerRoute =  '/register/';
 const mainRoute = '/main/';
 const homeRoute =  '/home/';
 const verifyEmailRoute =  '/verify-email/';
-const myAccount =  '/my-account/';
+const myAccountRoute =  '/my-account/';
 const adminRoute = '/admin/';
+const profileRoute = '/profile/';
 
 const String google_api_key = 'AIzaSyBGxyKv4HnLcXg91hQtDYjoB942OmgX058';
 

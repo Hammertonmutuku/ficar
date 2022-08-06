@@ -23,7 +23,10 @@ class ProfileMenu extends StatelessWidget {
         ProfileMenuItems(
           text: "My Account",
           icon: Icons.manage_accounts_outlined,
-          press: () => {},
+          press: () => {
+            Navigator.of(context).pushNamedAndRemoveUntil(
+                                profileRoute, (route) => false)
+          },
         ),
         ProfileMenuItems(
           text: "Notifications",

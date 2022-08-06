@@ -1,13 +1,14 @@
 import 'package:ficar/Constants/routes.dart';
 import 'package:ficar/components/Login/email_text_field.dart';
 import 'package:ficar/components/Login/password_text_field.dart';
-import 'package:ficar/errors/erros.dart';
+import 'package:ficar/components/Login/size_box.dart';
+import 'package:ficar/DialogBox/errors/erros.dart';
 import 'package:ficar/services/auth/auth_exceptions.dart';
 import 'package:ficar/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as devtools show log;
 
-import '../components/Login/size_box.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -67,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizeBox(),
               EmailTextField(emailController: _emailController),
               const SizeBox(),
-              PaaswordTextField(passwordController: _passwordController),
+              PasswordTextField(passwordController: _passwordController),
               const SizeBox(),
               Row(
                 children: [
@@ -115,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                         if (user != null) {
                           if (user.isEmailVerified) {
                             Navigator.of(context).pushNamedAndRemoveUntil(
-                                mainRoute, (route) => false);
+                                myAccountRoute, (route) => false);
                             devtools.log(userCredential.toString());
                           } else {
                             emailVerificationDialog(context);

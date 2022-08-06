@@ -4,14 +4,14 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer';
 
-class AdminPanel extends StatefulWidget {
-  const AdminPanel({Key? key}) : super(key: key);
+class AdminPanel2 extends StatefulWidget {
+  const AdminPanel2({Key? key}) : super(key: key);
 
   @override
-  State<AdminPanel> createState() => _AdminPanelState();
+  State<AdminPanel2> createState() => _AdminPanel2State();
 }
 
-class _AdminPanelState extends State<AdminPanel> {
+class _AdminPanel2State extends State<AdminPanel2> {
 
 
 

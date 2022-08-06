@@ -5,7 +5,7 @@ import 'dart:developer' as devtools show log;
 
 
 import 'package:ficar/Constants/routes.dart';
-import 'package:ficar/errors/erros.dart';
+import 'package:ficar/DialogBox/errors/erros.dart';
 import 'package:ficar/services/auth/auth_exceptions.dart';
 import 'package:ficar/services/auth/auth_service.dart';
 
@@ -71,16 +71,16 @@ class _RegisterPageState extends State<RegisterPage> {
                   AuthService.firebase().sendEmailVerification();
                   Navigator.of(context).pushNamedAndRemoveUntil(
                       verifyEmailRoute, (route) => false);
-                  devtools.log(userCredential.toString());
+                   devtools.log(userCredential.toString());
                 } on WeakPasswordAuthException {
                   await showErrorDialog(context, 'weak-password');
-                  devtools.log('weak-password');
+                  // devtools.log('weak-password');
                 } on EmailAlreadyInUseAuthException {
                   await showErrorDialog(context, 'email already in use');
-                  devtools.log('email already in use');
+                  // devtools.log('email already in use');
                 } on InvalidEmailAuthException {
                   await showErrorDialog(context, 'Invalid email');
-                  devtools.log('Invalid email');
+                  // devtools.log('Invalid email');
                 } on GenericAuthException {
                   await showErrorDialog(
                     context,

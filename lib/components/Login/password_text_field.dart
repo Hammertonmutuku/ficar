@@ -1,20 +1,29 @@
+import 'dart:ffi';
+
 import 'package:ficar/Constants/routes.dart';
 import 'package:flutter/material.dart';
 
-class PaaswordTextField extends StatelessWidget {
-  const PaaswordTextField({
+class PasswordTextField extends StatefulWidget {
+  const PasswordTextField({
     Key? key,
     required TextEditingController passwordController,
-  }) : _passwordController = passwordController, super(key: key);
+  })  : _passwordController = passwordController,
+        super(key: key);
 
   final TextEditingController _passwordController;
 
   @override
+  State<PasswordTextField> createState() => _PasswordTextFieldState();
+}
+
+class _PasswordTextFieldState extends State<PasswordTextField> {
+  bool isHiddenPassword = true;
+  @override
   Widget build(BuildContext context) {
     return TextField(
       autofocus: false,
-      obscureText: true,
-      controller: _passwordController,
+      obscureText: isHiddenPassword,
+      controller: widget._passwordController,
       textInputAction: TextInputAction.next,
       cursorColor: kPrimaryColor,
       decoration: InputDecoration(
@@ -22,11 +31,18 @@ class PaaswordTextField extends StatelessWidget {
           Icons.vpn_key,
           color: kPrimaryColor,
         ),
+        suffixIcon: IconButton(
+          onPressed: _togglePassword,
+          icon: const Icon(
+            Icons.visibility,
+            color: kPrimaryColor,
+          ),
+        ),
         filled: true,
         fillColor: Colors.white,
         hintText: "Password",
         isDense: true,
-        contentPadding: const EdgeInsets.all(10),
+        contentPadding: const EdgeInsets.all(12),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(25.0),
           borderSide: const BorderSide(color: Colors.white),
@@ -37,5 +53,10 @@ class PaaswordTextField extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _togglePassword() {
+    isHiddenPassword = !isHiddenPassword;
+    setState(() {});
   }
 }

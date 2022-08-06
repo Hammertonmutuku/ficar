@@ -51,7 +51,10 @@ class MapUserBadge extends StatelessWidget {
             ],
           ),
         ),
-       const  Icon(Icons.location_pin,size: 40, color: kPrimaryColor,),
+        IconButton(onPressed: () {
+          Navigator.of(context).pushNamedAndRemoveUntil(
+                                myAccountRoute, (route) => false);
+        }, icon: Icon(Icons.menu,size: 40, color: kPrimaryColor,)),
       ]),
     );
   }
